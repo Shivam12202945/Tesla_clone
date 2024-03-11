@@ -1,0 +1,273 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+html{
+  scroll-behavior: smooth;
+}
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+body{
+ box-sizing: border-box;
+ overflow: hidden;
+}
+header div img{
+  width: 120px;
+  height: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+header{
+  margin-right: 10px;
+  z-index: 1;
+  margin-left: 50px;
+  justify-content: space-between;
+  position: fixed;
+  display: flex;
+}
+header a{
+  line-height: 30px;
+  padding: 0 15px;
+  white-space: nowrap;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color:rgb(34, 34, 34) ;
+}
+.mdl
+{
+  margin-left: 200px;
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+.mdl a:nth-child(6)
+{
+  padding-right: 180px;
+}
+.hover{
+  background-color: rgba(128, 128, 128, 0,15);
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.7s;
+  height: 30px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+
+
+.main-1{
+ display: flex;
+ overflow: auto;
+ flex: none;
+ width: 100%;
+ height: 100vh;
+ flex-flow: column nowrap;
+ scroll-snap-type: y mandatory;
+}
+.main-1>div{
+  text-align: center;
+  flex: none;
+  scroll-snap-align:center ;
+  width: 100%;
+  height: 100%;
+}
+.main-1 div img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+.main-2{
+ position: relative;
+}
+.head{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  top: 0;
+  height: 40vh;
+  align-items: center;
+}
+.head h1{
+  font-size: 45px;
+  font-weight: 500;
+  color: rgb(61, 61, 61);
+  padding-bottom: 5px;
+}
+.head span{
+  color: rgb(53, 53, 53);
+  font-size: 17px;
+}
+.head a{
+  color: rgb(53, 53, 53);
+  text-decoration: underline;
+  font-size: 17px;
+  cursor: pointer;
+  text-underline-position: under ;
+}
+.head a:hover{
+  text-decoration-thickness: 2px;
+}
+.login{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+.login div{
+  display: flex;
+  justify-content: center;
+}
+.btn div{
+  align-items: center;
+  margin-right: 15px;
+  margin-left: 15px;
+  width: 250px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+#order{
+  background-color: #393c41;
+  color: white;
+
+}
+#invn{
+  background-color: #eeebeb;
+  color:#393c41 ;
+
+}
+#invn,#order{
+  font-size: 14px;
+  font-weight: 500;
+}
+.blank{
+  height: 90px;
+}
+.login .arrow{
+  height:60px;
+  font-size: 25px;
+  color: rgb(75,75,75);
+  animation: updown 1.5s ease infinite;
+}
+@keyframes updown {
+  0%{
+    transform: translateY(0);
+  }
+  10%{
+    transform: translateY(5px);
+  }
+  20%{
+    transform: translateY(0px);
+  }
+  30%{
+    transform: translateY(5px);
+  }
+  40%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(5px);
+  }
+  60%{
+    transform: translateY(0);
+  }
+  80%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translatey(0);
+  }
+}
+.main .head h1{
+   animation: showpan 1s;
+}
+.main .head span{
+  animation: show 2s;
+}
+
+@keyframes show {
+  0%{
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  40%{
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  70%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes showpan {
+  0%{
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.login #order
+{
+  animation: order 1s;
+}
+@keyframes order {
+  0%{
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.login #invn
+{
+  animation: invn 1s;
+}
+@keyframes invn  {
+  0%{
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+header a{
+  line-height: 30px;
+  padding: 0 15px;
+  white-space: nowrap;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color:rgb(34, 34, 34) ;
+}
